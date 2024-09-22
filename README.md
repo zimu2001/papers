@@ -4,4 +4,4 @@
 
 9.17 [2009 - IEEE COMPUTER] MATRIX  FACTORIZATION  TECHNIQUES FOR  RECOMMENDER  SYSTEMS.
 
-9.22 [2017 - WWW0] Neural Collaborative Filtering.
+9.22 [2017 - WWW] Neural Collaborative Filtering.
