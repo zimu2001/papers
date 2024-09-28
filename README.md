@@ -16,7 +16,7 @@ MLP + RS
 
 9.25 [2010 - ICDM] Factorization Machines. FM分解机，未读。DeepFM中简单涉及了一下。
 
-9.25 [2017 - KDD] Deep and cross network for ad click predictions. DCN，涉及到残差网络，先读resnet
+9.25 [2017 - KDD] Deep and cross network for ad click predictions. 
 
-9.25 [2016 - CVPR] Deep Residual Learning for Image Recognition. 
+9.26 [2016 - CVPR] Deep Residual Learning for Image Recognition. 上篇涉及到了残差，简单读了一下resNet。
 
