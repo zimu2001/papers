@@ -16,7 +16,14 @@ MLP + RS
 
 9.25 [2010 - ICDM] Factorization Machines. FM分解机，未读。DeepFM中简单涉及了一下。
 
-9.25 [2017 - KDD] Deep and cross network for ad click predictions. 
+9.25
 
-9.26 [2016 - CVPR] Deep Residual Learning for Image Recognition. 上篇涉及到了残差，简单读了一下resNet。
+9.26 [2016 - CVPR] Deep Residual Learning for Image Recognition. 下篇涉及到了残差，简单读了一下resNet。
 
+9.27-28
+
+9.29 [2017 - KDD] Deep and cross network for ad click predictions. 
+
+-zju实现了几个deepCTR预测模型的代码，[here](https://github.com/shenweichen/DeepCTR-Torch/?tab=readme-ov-file)。
+
+9.30 [2018 - KDD] xDeepFM: Combining explicit and implicit feature interactions for recommender systems.
