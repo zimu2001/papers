@@ -27,3 +27,5 @@ MLP + RS
 -zju实现了几个deepCTR预测模型的代码，[here](https://github.com/shenweichen/DeepCTR-Torch/?tab=readme-ov-file)。
 
 9.30 [2018 - KDD] xDeepFM: Combining explicit and implicit feature interactions for recommender systems.
+
+10.2 [2022 - WWW] Filter-enhanced MLP is All You Need for Sequential Recommendation.
