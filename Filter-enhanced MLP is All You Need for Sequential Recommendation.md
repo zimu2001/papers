@@ -4,7 +4,9 @@ Filter-enhanced MLP is All You Need for Sequential Recommendation.
 
 #### 0
 
-序列推荐，旨在从用户历史行为数据中捕捉特征以进行推荐。一个常见问题是数据具有噪声，深度模型通常会对其过拟合。本文借鉴信号处理的滤波 filtering 算法，采用MLP+Filtering代替Trnsformer的多头注意力。即FMLP-Rec。
+序列推荐，旨在从用户历史行为数据中捕捉特征以进行推荐。一个常见问题是数据具有噪声，深度模型通常会对其过拟合。
+
+本文借鉴信号处理中的滤波 filtering 算法，采用MLP+Filtering代替Trnsformer的多头注意力。即FMLP-Rec。
 
 #### -1
 
@@ -30,11 +32,13 @@ FFT，能将DFT的计算复杂度下降至 nlogn，
 
 FFT获得的频域信号再通过一些滤波算法去掉噪声。
 
-值得注意的是，直接删除噪声是很难的，我们只是尽力得到噪声影响较小的新信号表示。
+```
+值得注意的是，在信号中直接删除噪声是很难的，我们只是尽力得到噪声影响较小的新信号表示。
+```
 
 #### -0.2验证滤波有效性
 
-选择GRU4Rec [17] 和 SASRec [22] 进行实验。上述模型很大程度上遵循深度序列模型的标准框架——由嵌入层、序列编码器层和预测层组成，只是序列编码器层分别采用RNN和Transformer。
+选择 GRU4Rec 和 SASRec 进行实验。上述模型很大程度上遵循深度序列模型的标准框架——由嵌入层、序列编码器层和预测层组成，只是序列编码器层分别采用RNN和Transformer。
 
 尽管这两个模型显示出了有希望的结果，但它们可能对用户行为序列中的噪声不具有鲁棒性。因此，我们直接添加一个非参数过滤层位于两个模型的嵌入层和序列编码器层之间，并且不改变其他组件。  
 
@@ -125,4 +129,18 @@ ei 是项嵌入矩阵 M I 中项 i 的表示，FL t 是第 t 步 L 层可学习�
 成对排名损失
 
 ![image-20241002231916207](Filter-enhanced MLP is All You Need for Sequential Recommendation/image-20241002231916207.png)
+
+#### Theoretical Analysis with Filter Layers
+
+论文还额外证明了滤波器下相当于循环卷积circular convolution。在此不赘述。
+
+因此，它可以拥有与自注意力机制相同的感受野，但大大减少了涉及的参数数量。其时空复杂度会大幅度降低
+
+![image-20241003103324011](Filter-enhanced MLP is All You Need for Sequential Recommendation/image-20241003103324011.png)
+
+此外，循环卷积能够捕获周期性特征，这也是顺序推荐的一个重要特征。
+
+#### 实验
+
+暂略
 
