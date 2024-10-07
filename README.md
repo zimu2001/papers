@@ -4,7 +4,7 @@
 
 9.17 [2009 - IEEE COMPUTER] MATRIX  FACTORIZATION  TECHNIQUES FOR  RECOMMENDER  SYSTEMS.
 
-MLP + RS
+##### MLP + RS
 
 9.22 [2017 - WWW] Neural Collaborative Filtering.
 
@@ -13,8 +13,6 @@ MLP + RS
 9.23 [2016 - RecSys] Wide \& deep learning for recommender systems.
 
 9.24 [2017 - IJCAI] DeepFM: A Factorization-Machine based Neural Network for CTR Prediction.
-
-9.25 [2010 - ICDM] Factorization Machines. FM分解机，**未读**。
 
 9.26 [2016 - CVPR] Deep Residual Learning for Image Recognition. 简单读了一下残差。
 
@@ -28,3 +26,20 @@ MLP + RS
 
 10.3 [2023 - AAAI] FinalMLP: An Enhanced TwoStream MLP Model for CTR Prediction.
 
+##### Sequntial RS
+
+10.7 [2017 - RecSys] Translation-based recommendation.
+
+
+
+
+
+
+
+未读
+
+9.25 [2010 - ICDM] Factorization Machines. FM分解机，**未读**。
+
+10.5 [1991 - NC] Adaptive Mixtures of Local Experts.  Moe的开篇之作，关联+竞争学习。
+
+10.6 [2017 - ICLR] OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER.  谷歌  moe+lstm做机器翻译
