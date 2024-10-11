@@ -32,7 +32,7 @@
 
 10.9 [2016 - ICLR] SESSION-BASED RECOMMENDATIONS WITH  RECURRENT NEURAL NETWORKS.
 
-10.11 []
+10.11 [2018 - WSDM] Personalized top-N sequential recommendation via convolutional sequence embedding.
 
 
 
