@@ -34,6 +34,8 @@
 
 10.11 [2018 - WSDM] Personalized top-N sequential recommendation via convolutional sequence embedding.
 
+10.12 [2018- ICDM] Self-Attentive Sequential Recommendation.
+
 
 
 未读
@@ -44,4 +46,4 @@
 
 10.6 [2017 - ICLR] OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER.  谷歌  moe+lstm做机器翻译
 
-10. 10 [2018 - CIKM] Recurrent neural networks with top-k gains for session-based recommendations.上一天GRU4Rec的续作，GRU4Rec+
+10.10 [2018 - CIKM] Recurrent neural networks with top-k gains for session-based recommendations.上一天GRU4Rec的续作，GRU4Rec+

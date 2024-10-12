@@ -124,3 +124,75 @@ W ∈ R^{d * (n + d \tilde{n})} 是将连接层投影到 d 维隐藏层的权重
 z 旨在捕捉短期的顺序模式，而用户嵌入 P_u 捕捉用户的长期一般偏好。
 ```
 
+#### train
+
+使用 sigmoid 将输出转化为概率
+
+![image-20241011222836412](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011222836412.png)
+
+设 Cu = {L + 1， L + 2， ...， |Su |}是我们要对用户 u 进行预测的时间步长的集合。数据集中所有序列的可能性
+
+![image-20241011223151136](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011223151136.png)
+
+为了进一步捕获跳过行为，我们可以考虑下 T 个目标项 Dtu = {Stu ， Su t +1， ...， Su t+T }，方法是将上述等式中的下一个项 Stu 替换为 Dtu 。
+
+取似然的负对数，我们得到目标函数
+
+![image-20241011223731696](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011223731696.png)
+
+```
+上式也称为二进制交叉熵损失
+```
+
+模型参数 Θ = {P， Q， F ， F ̃，W ，W ′， b， b′} 是通过最小化训练集上方程 （13） 中的目标函数来学习的，而超参数（例如，d、n、n ̃、L、T ）是通过网格搜索在验证集上进行调整的。
+
+```
+采用自适应矩估计 （Adam） 的随机梯度下降 （SGD） 变体，以实现更快的收敛，批处理大小为 100。正则化采用两个方法，L2 范数应用于所有模型参数，并且在全连接层使用丢弃率50%的 Dropout 具有。
+```
+
+#### perdict
+
+取 u 的潜在嵌入 Pu 并提取方程 （2） 给出的他最后 L 项的嵌入作为神经网络输入。使用输出层 y 中值最高的 N 个项目。向所有用户提出建议的复杂度为 O（|U||I|d）。
+
+#### 实验
+
+没有直接使用公开数据集，而是对他们进行了顺序关联的规则挖掘，并计算它们的顺序强度。
+
+定义 SI 估计顺序信号的强度
+
+![image-20241011230456646](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011230456646.png)
+
+分子是使用support（即 5）和置信度（即 50%）找到的公式（1）形式的规则总数，分母是用户总数。
+
+删除了冷启动项目和反馈小于 n 的项目
+
+训练验证测试 712
+
+指标 p r map
+
+给定用户的前 N 个预测项目列表，表示为 R^1:N ，以及她/他的序列中最后 20% 的操作（即表示为 R（即测试集））
+
+![image-20241012083827133](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012083827133.png)
+
+![image-20241012083905218](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012083905218.png)
+
+其中，如果 Rˆ 中的第 N 个项目在 R 中，则 rel(N ) = 1。平均精度 (MAP) 是所有用户的 AP 平均值。
+
+result
+
+![image-20241012084113381](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012084113381.png)
+
+超参数研究
+
+![image-20241012084132598](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012084132598.png)
+
+![image-20241012084139563](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012084139563.png)
+
+组件分析
+
+![image-20241012084409841](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012084409841.png)
+
+实例分析
+
+![image-20241012084538840](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241012084538840.png)
+
