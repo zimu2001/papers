@@ -36,7 +36,11 @@
 
 10.12 [2018- ICDM] Self-Attentive Sequential Recommendation.
 
+10.17 Attention is all you need
 
+##### NLP
+
+10.15 []
 
 未读
 
