@@ -38,6 +38,32 @@
 
 10.17 Attention is all you need
 
+##### GNN
+
+
+
+##### GNN + RS
+
+ngcf
+
+lightgcn
+
+kgat
+
+
+
+##### Contrast Learning
+
+magcl
+
+mcclk
+
+
+
+##### LLM
+
+10.21 
+
 ##### NLP
 
 10.15 []
