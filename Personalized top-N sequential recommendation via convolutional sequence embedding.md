@@ -130,7 +130,7 @@ z 旨在捕捉短期的顺序模式，而用户嵌入 P_u 捕捉用户的长期�
 
 ![image-20241011222836412](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011222836412.png)
 
-设 Cu = {L + 1， L + 2， ...， |Su |}是我们要对用户 u 进行预测的时间步长的集合。数据集中所有序列的可能性
+设 Cu = {L + 1， L + 2， ...， |Su |}是我们要对用户 u 进行预测的时间步长的集合。数据集中所有序列的可能性（负样本是随机选择的）
 
 ![image-20241011223151136](./Personalized top-N sequential recommendation via convolutional sequence embedding/image-20241011223151136.png)
 
