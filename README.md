@@ -38,6 +38,20 @@
 
 10.17 Attention is all you need
 
+bert4rec
+
+ngcf
+
+kgcn
+
+lightgcn
+
+gcn
+
+dgcf
+
+10.29 [2024 - SIGIR]  SelfGNN: Self-Supervised Graph Neural Networks for Sequential Recommendation
+
 ##### NLP
 
 10.15 []
