@@ -38,6 +38,7 @@
 
 10.17 Attention is all you need
 
+<<<<<<< HEAD
 bert4rec
 
 ngcf
@@ -51,6 +52,33 @@ gcn
 dgcf
 
 11.03 [2024 - SIGIR]  SelfGNN: Self-Supervised Graph Neural Networks for Sequential Recommendation
+=======
+##### GNN
+
+
+
+##### GNN + RS
+
+ngcf
+
+lightgcn
+
+kgat
+
+
+
+##### Contrast Learning
+
+magcl
+
+mcclk
+
+
+
+##### LLM
+
+10.21 
+>>>>>>> 293c7f4bc59b4b2d4f1990990ff96eaccd0ee207
 
 ##### NLP
 
