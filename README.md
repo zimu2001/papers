@@ -50,7 +50,7 @@ gcn
 
 dgcf
 
-10.29 [2024 - SIGIR]  SelfGNN: Self-Supervised Graph Neural Networks for Sequential Recommendation
+11.03 [2024 - SIGIR]  SelfGNN: Self-Supervised Graph Neural Networks for Sequential Recommendation
 
 ##### NLP
 
@@ -65,3 +65,5 @@ dgcf
 10.6 [2017 - ICLR] OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER.  谷歌  moe+lstm做机器翻译
 
 10.10 [2018 - CIKM] Recurrent neural networks with top-k gains for session-based recommendations.上一天GRU4Rec的续作，GRU4Rec+
+
+越来越懒了，不想写笔记。
